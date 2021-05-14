@@ -18,8 +18,4 @@ public class People {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
-    public People(String name) {
-        this.name = name;
-    }
 }

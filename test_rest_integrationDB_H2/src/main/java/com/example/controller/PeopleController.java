@@ -3,7 +3,6 @@ package com.example.controller;
 import com.example.model.People;
 import com.example.service.PeopleService;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.Optional;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/people")
-@NoArgsConstructor
 public class PeopleController {
     PeopleService service;
 
