@@ -15,6 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class PeopleServiceTest {
     @Autowired
     PeopleRepository repository;
+    @Autowired
+    PeopleService service;
     People people1;
     People people2;
 
@@ -29,9 +31,10 @@ class PeopleServiceTest {
     void afterEach(){
         repository.deleteAll();
     }
+
     @Test
     void findById_Test() throws Exception{
-        assertEquals(1,repository.findById(1L).get().getId());
-        assertEquals("Vova1",repository.findById(1L).get().getName());
+        assertEquals(1,service.findById(1L).get().getId());
+        assertEquals("Vova1",service.findById(1L).get().getName());
     }
 }

@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(classes = MainApp.class)
+@SpringBootTest
 class PeopleRepositoryTest {
     @Autowired
     PeopleRepository repository;
@@ -19,10 +19,8 @@ class PeopleRepositoryTest {
 
     @BeforeEach
     void beforeEach(){
-        people1 = new People(1L,"Vova1");
-        people2 = new People(2L, "Vova2");
-        repository.save(people1);
-        repository.save(people2);
+        people1 = repository.save(new People(1L,"Vova1"));
+        people2 = repository.save(new People(2L,"Vova2"));
     }
     @AfterEach
     void afterEach(){
@@ -38,7 +36,7 @@ class PeopleRepositoryTest {
     }
     @Test
     void delete_Test() throws Exception{
-        repository.delete(new People(1L,"Vova1"));
+        repository.delete(people1);
         assertEquals(1,repository.findAll().size());
     }
 }
