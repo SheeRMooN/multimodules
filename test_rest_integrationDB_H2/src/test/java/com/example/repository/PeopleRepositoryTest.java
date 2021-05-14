@@ -20,7 +20,7 @@ class PeopleRepositoryTest {
     @BeforeEach
     void beforeEach(){
         people1 = new People(1L,"Vova1");
-        people2 = new People(2L, "Voloda2");
+        people2 = new People(2L, "Vova2");
         repository.save(people1);
         repository.save(people2);
     }
@@ -38,7 +38,7 @@ class PeopleRepositoryTest {
     }
     @Test
     void delete_Test() throws Exception{
-        repository.delete(people1);
+        repository.delete(new People(1L,"Vova1"));
         assertEquals(1,repository.findAll().size());
     }
 }
