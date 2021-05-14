@@ -2,21 +2,34 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="rest" />
+        <module name="aop_aspect" />
+        <module name="event_listener_publisher_handler" />
+        <module name="test_for_test" />
         <module name="simple" />
+        <module name="test_rest_integrationDB_H2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="simple_example" target="11" />
       <module name="simple_excampl" target="11" />
+      <module name="test_tutorial" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="aop_aspect" options="-parameters" />
+      <module name="event_listener_publisher_handler" options="-parameters" />
+      <module name="rest" options="-parameters" />
       <module name="simple" options="-parameters" />
+      <module name="test_for_test" options="-parameters" />
+      <module name="test_rest_integrationDB_H2" options="-parameters" />
+      <module name="test_tutorial" options="-parameters" />
     </option>
   </component>
 </project>
