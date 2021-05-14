@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rest" />
-        <module name="simple" />
-        <module name="test_rest_integrationDB_H2" />
         <module name="aop_aspect" />
         <module name="event_listener_publisher_handler" />
         <module name="test_for_test" />
+        <module name="test_rest_hibernate_CRUD" />
+        <module name="simple" />
+        <module name="test_rest_integrationDB_H2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +29,7 @@
       <module name="rest" options="-parameters" />
       <module name="simple" options="-parameters" />
       <module name="test_for_test" options="-parameters" />
+      <module name="test_rest_hibernate_CRUD" options="-parameters" />
       <module name="test_rest_integrationDB_H2" options="-parameters" />
       <module name="test_tutorial" options="-parameters" />
     </option>
